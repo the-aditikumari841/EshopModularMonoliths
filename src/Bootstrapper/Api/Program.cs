@@ -12,22 +12,24 @@ var app = builder.Build();
 //  Configure the HTTP request pipeline
 
 
-//Use static files
-app.UseStaticFiles();
+////Use static files
+//app.UseStaticFiles();
 
-// Use routing
-app.UseRouting();
+//// Use routing
+//app.UseRouting();
 
-// Use authentication
-app.UseAuthentication();
+//// Use authentication
+//app.UseAuthentication();
 
-// Use authorization
-app.UseAuthorization();
+//// Use authorization
+//app.UseAuthorization();
 
-// Define endpoints
-app.UseEndpoints(endpoints =>
-{
-    endpoints.MapControllers();
-});
+//// Define endpoints
+//app.UseEndpoints(endpoints =>
+//{
+//    endpoints.MapControllers();
+//});
+
+
 
 app.Run();
