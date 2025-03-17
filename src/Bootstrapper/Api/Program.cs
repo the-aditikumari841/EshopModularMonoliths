@@ -1,11 +1,33 @@
+using Basket;
+using Catalog;
+using Ordering;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container
+//Add services to the container
+builder.Services.AddCatalogModule(builder.Configuration).AddBasketModule(builder.Configuration).AddOrderingModule(builder.Configuration);
 
 var app = builder.Build();
 
-//app.MapGet("/", () => "Hello World!");
+//  Configure the HTTP request pipeline
 
-// Configure the HTTP request pipeline.
+
+////Use static files
+//app.UseStaticFiles();
+
+//// Use routing
+//app.UseRouting();
+
+//// Use authentication
+//app.UseAuthentication();
+
+//// Use authorization
+//app.UseAuthorization();
+
+//// Define endpoints
+//app.UseEndpoints(endpoints =>
+//{
+//    endpoints.MapControllers();
+//});
 
 app.Run();
