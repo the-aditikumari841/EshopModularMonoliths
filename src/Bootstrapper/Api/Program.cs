@@ -30,6 +30,9 @@ var app = builder.Build();
 //    endpoints.MapControllers();
 //});
 
-
+app
+    .UseCatalogModule()
+    .UseBasketModule()
+    .UseOrderingModule();
 
 app.Run();
